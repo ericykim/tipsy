@@ -1,0 +1,6 @@
+[submodule "tipsy-server"]
+	path = tipsy-server
+	url = https://github.com/ericykim/tipsy-server.git
+[submodule "tipsy-client"]
+	path = tipsy-client
+	url = https://github.com/ericykim/tipsy-client.git
