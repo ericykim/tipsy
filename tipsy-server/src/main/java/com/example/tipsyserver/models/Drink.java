@@ -13,7 +13,8 @@ public class Drink {
     private String drinkName;
     @OneToMany( targetEntity = Step.class)
     private List<Step> steps;
-    @OneToMany(targetEntity = Ingredient.class)
+    @OneToMany(targetEntity = Ingredient.class, cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Ingredient> ingredients;
     private String imageUrl;
 
