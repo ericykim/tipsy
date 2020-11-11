@@ -3,11 +3,11 @@ package com.example.tipsyserver.controllers;
 
 import com.example.tipsyserver.services.DrinkService;
 import com.example.tipsyserver.models.Drink;
-import org.json.JSONException;
+// import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
+// import java.io.IOException;
 
 @RestController
 @CrossOrigin("*")
@@ -15,10 +15,15 @@ public class DrinkController {
     @Autowired
     private DrinkService drinkService;
 
-    @GetMapping("/api/v1/drinks/search")
-    public Drink searchForDrink(@RequestParam String drinkName) throws IOException, InterruptedException, JSONException {
-        return drinkService.searchForDrink(drinkName);
-    }
+    @GetMapping
+	public String get() {
+		return "We good";
+	}
+
+    // @GetMapping("/api/v1/drinks/search")
+    // public Drink searchForDrink(@RequestParam String drinkName) throws IOException, InterruptedException, JSONException {
+    //     return drinkService.searchForDrink(drinkName);
+    // }
 
     @GetMapping("/api/v1/drinks/{drinkId}")
     public Drink getDrinkById(@PathVariable ("drinkId") int drinkId){
