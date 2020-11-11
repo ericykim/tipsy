@@ -41,12 +41,12 @@ public class Drink {
         this.ingredients = ingredients;
     }
 
-    public String getImageUrls() {
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrls(String imageUrls) {
-        this.imageUrl = imageUrls;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getDrinkName() {
