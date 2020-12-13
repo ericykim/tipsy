@@ -24,7 +24,7 @@ def main():
         new_drink = convert_drink(drink)
         json_value = json.dumps(new_drink)
 
-        url = "http://localhost:5000/api/v1/drinks"
+        url = "http://localhost:5000/api/v1/users/133/createdDrinks"
         headers = {'Content-type': 'application/json', 'Accept': '*/*'}
         r = requests.post(url, data=json_value, headers=headers)
 
@@ -38,7 +38,7 @@ def convert_drink(drink):
     ingredients = get_ingredients(drink)
 
     my_drink = {'drinkName': name, 'steps': steps, 'ingredients': ingredients,
-                'imageUrl': image_url}
+                'imageUrl': image_url, 'creatorId': 133, 'creatorUsername': 'Tipsy'}
     return my_drink
 
 
